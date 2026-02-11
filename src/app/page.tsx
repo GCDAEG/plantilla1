@@ -46,12 +46,17 @@ export default function HomePage() {
       <HeroSection />
 
       <FeatureSection />
+      <Exercises />
+
+      <HeroCallToAction />
       {/* STEPS */}
       <StepsSection />
       {/* FAQS */}
       <FAQS />
       {/* Floating elements (globales) */}
+      <FloatingCTA targetRef={ctaRef} />
       {/* <FloatingWhatsAppButton /> ← si lo tienes global */}
+      <LocationInfo />
     </main>
   );
 }
