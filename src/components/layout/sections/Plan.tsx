@@ -75,7 +75,7 @@ const gymPlans: {
 
 const StepsSection = ({}) => {
   return (
-    <Section id="steps" height="screen">
+    <Section id="plans" height="screen">
       <StaggerContainer
         className="
       mx-auto w-full max-w-7xl

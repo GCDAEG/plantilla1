@@ -3,7 +3,7 @@ import React from "react";
 // Si tenés tailwind variables para colores, ajustalas; acá uso clases estándar
 // Asumimos que bg-primary es naranja o similar al botón del ejemplo
 
-const HeroCallToAction: React.FC = () => {
+const CallToAction: React.FC = () => {
   return (
     <Section id="join-now" height="content">
       {" "}
@@ -80,4 +80,4 @@ const HeroCallToAction: React.FC = () => {
   );
 };
 
-export default HeroCallToAction;
+export default CallToAction;

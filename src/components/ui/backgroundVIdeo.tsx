@@ -48,14 +48,13 @@ export default function BackgroundVideo({
   overlay = "dark",
   className = "",
   children,
-  minHeight = "min-h-screen",
   objectPosition = "center",
   poster,
   id,
 }: BackgroundVideoProps) {
   const overlayContent =
     overlay === "none" ? null : overlay === "gradient" ? (
-      <div className="absolute inset-0 bg-linear-to-b from-black/30 via-black/10 to-black/60 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/10 via-black/5 to-black/90 pointer-events-none" />
     ) : overlay === "dark" ? (
       <div className="absolute inset-0 bg-black/45 pointer-events-none" />
     ) : (
@@ -64,11 +63,12 @@ export default function BackgroundVideo({
 
   return (
     <Section
-      className={`relative w-full overflow-hidden ${minHeight} ${className} `}
+      className={`flex relative overflow-hidden  ${className} `}
       id={id}
+      height="screen"
     >
-      <div className="bg-linear-to-b from-black/80 to-transparent inset-0 z-1 absolute top-0 left-0 w-full h-full"></div>
       {/* Video de fondo */}
+      <div className="absolute top-0 left-0 w-full h-full bg-linear-to-b from-black/80 to-transparent z-10"></div>
       <video
         autoPlay
         loop
@@ -76,7 +76,7 @@ export default function BackgroundVideo({
         playsInline
         preload="auto"
         poster={poster}
-        className="absolute inset-0 h-full w-screen object-cover"
+        className="absolute inset-0 h-full w-screen object-cover "
         style={{ objectPosition }}
       >
         {webmSrc && <source src={webmSrc} type="video/webm" />}
@@ -88,7 +88,7 @@ export default function BackgroundVideo({
       {overlayContent}
 
       {/* Contenido principal (encima del video) */}
-      <div className="relative z-10 h-full w-full">{children}</div>
+      <div className="relative flex z-10 flex-1 w-full ">{children}</div>
     </Section>
   );
 }

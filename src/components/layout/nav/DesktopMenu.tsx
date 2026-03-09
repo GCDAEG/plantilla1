@@ -80,7 +80,7 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({
               onClick={(e) => {
                 e.preventDefault();
                 lenis?.scrollTo(`#${s.id}`, {
-                  offset: -96,
+                  offset: -80,
                   duration: 1.2,
                 });
               }}

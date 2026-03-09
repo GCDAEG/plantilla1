@@ -35,7 +35,7 @@ export function NavBar() {
       layout
       ref={ref}
       className={cn(
-        "sticky top-0 z-50 w-full transition-all bg-sidebar h-20 ",
+        "sticky top-0 z-50 w-full transition-all bg-sidebar h-20 shadow-sm",
         isScrolled ? "shadow-sm" : "",
       )}
     >

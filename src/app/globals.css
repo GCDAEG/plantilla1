@@ -79,7 +79,7 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.396 0.141 25.723);
    /* altura nav */
-  --navbar-height:96px;
+  --navbar-height:80px;
 
   /* font sources */
   /* --font-sans: var(--font-roboto);
@@ -88,6 +88,9 @@
 }
 
 @layer components {
+    body {
+    @apply bg-background text-foreground;
+  }
   h1,h2{
     font-family:var(--font-bebas_nue);
   }
@@ -102,7 +105,8 @@
   p,button,Button,li,Link,a{
     font-family: var(--font-roboto)
   }
-  body {
-    @apply bg-background text-foreground;
-  }
+  section {
+  scroll-margin-top: var(--navbar-height);
+}
+
 }

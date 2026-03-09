@@ -6,7 +6,7 @@ import BackgroundVideo from "@/components/ui/backgroundVIdeo";
 const HeroSection = ({}) => {
   return (
     <BackgroundVideo
-      className={`flex items-end md:items-center min-h-screen lg:px-28`}
+      className={`flex items-end md:items-center lg:px-28`}
       id="hero"
       src="/videos/video1.mp4"
     >

@@ -7,19 +7,19 @@ Una plantilla moderna, rápida y responsive para sitios web de gimnasios, centro
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-![FitZone Preview](https://via.placeholder.com/1280x720/111827/ffffff?text=FitZone+Preview+Here)  
-_(Reemplaza esta imagen con una captura real de tu homepage una vez que lo tengas listo)_
+## Vista previa
+
+![FitZone Preview](public/preview.png)
 
 ## ✨ Características principales
 
 - Diseño moderno y 100% responsive (mobile-first)
-- Animaciones suaves con Framer Motion y Lenis (scroll suave)
-- Tema claro/oscuro automático con `next-themes`
+- Animaciones suaves con Framer Motion y Lenis (scroll suave y natural)
 - Iconos elegantes de Lucide React
-- Optimización de fuentes con `next/font/google`
+- Optimización automática de fuentes con `next/font/google`
 - Estructura limpia con componentes reutilizables
 - Listo para deploy en Vercel (o cualquier hosting)
-- Accesibilidad y rendimiento alto (Lighthouse 95+)
+- Alto rendimiento y accesibilidad
 
 ## 🛠️ Tecnologías utilizadas
 
@@ -29,8 +29,6 @@ _(Reemplaza esta imagen con una captura real de tu homepage una vez que lo tenga
 - **Íconos**: Lucide React 0.563
 - **Utilidades**: clsx, tailwind-merge, react-use
 - **Fuentes**: Roboto, Lora, Montserrat (optimizadas con next/font)
-- **Tema**: next-themes (dark/light mode)
-- **Linter**: ESLint + TypeScript 5
 
 ## 🚀 Instalación y ejecución
 
