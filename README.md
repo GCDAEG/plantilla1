@@ -9,7 +9,7 @@ Una plantilla moderna, rápida y responsive para sitios web de gimnasios, centro
 
 ## Vista previa
 
-![FitZone Preview](public/preview.png)
+![FitZone Preview](public/preview.jpeg)
 
 ## ✨ Características principales
 
