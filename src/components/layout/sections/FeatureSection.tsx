@@ -1,18 +1,10 @@
 import React from "react";
-import { StaggerContainer } from "../../../components/motion/StraggerContainer";
-import { FadeIn } from "../../../components/motion/FadeIn";
-import { base, title, titleH2 } from "@/app/page";
-import { Separator } from "../../../components/ui/separator";
+import { StaggerContainer } from "../../motion/StraggerContainer";
+import { FadeIn } from "../../motion/FadeIn";
 import { Section } from "@/components/layout/Section";
-import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
-import { BiCylinder } from "react-icons/bi";
-import { GrBike } from "react-icons/gr";
-import { LiaBicycleSolid } from "react-icons/lia";
-import { TbGymnastics, TbNeedle, TbTreadmill } from "react-icons/tb";
-import { Heart, PlaneIcon } from "lucide-react";
-import { FaNutritionix } from "react-icons/fa";
+import { TbTreadmill } from "react-icons/tb";
+import { Heart } from "lucide-react";
 import { CgGym } from "react-icons/cg";
-import { GiGymBag, GiNeedleDrill, GiNeedleJaws } from "react-icons/gi";
 import { IoNutrition } from "react-icons/io5";
 
 // interface FeatureSectionProps {}
@@ -45,7 +37,7 @@ const features: { id: string; title: string; text: string; icon?: any }[] = [
 ];
 const FeatureSection = ({}) => {
   return (
-    <Section id="features" size="content">
+    <Section id="features" height="content">
       <StaggerContainer
         className="
       mx-auto w-full max-w-7xl
@@ -56,11 +48,9 @@ const FeatureSection = ({}) => {
       py-24
     "
       >
-        <FadeIn className="w-full flex flex-col justify-center items-center">
-          <h3 className={`${titleH2} text-3xl text-primary`}>
-            ¿Por que elegirnos?
-          </h3>
-          <h2 className={`${titleH2} text-5xl`}>Supera tus limites</h2>
+        <FadeIn className="w-full flex flex-col justify-center items-center gap-2">
+          <h3 className={` text-3xl text-primary`}>¿Por que elegirnos?</h3>
+          <h2 className={` text-5xl`}>Supera tus limites</h2>
         </FadeIn>
         <div className="w-full h-full grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
@@ -73,11 +63,9 @@ const FeatureSection = ({}) => {
                   {feature.icon}
                 </div>
               </div>
-              <div className="flex-1 flex flex-col space-y-3">
-                <h3 className={`${titleH2} text-2xl text-center`}>
-                  {feature.title}
-                </h3>
-                <p className={`${base} text-center text-sm`}>{feature.text}</p>
+              <div className="flex-1 flex flex-col space-y-3 items-center">
+                <h4>{feature.title}</h4>
+                <p className={` text-center text-sm`}>{feature.text}</p>
               </div>
             </FadeIn>
           ))}

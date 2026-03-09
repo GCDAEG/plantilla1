@@ -15,7 +15,7 @@ interface LocationInfoProps {}
 
 const LocationInfo: React.FC<LocationInfoProps> = ({}) => {
   return (
-    <Section size="content">
+    <Section height="content">
       <div className="grid lg:grid-cols-3 px-6 md:px-36 py-16 gap-5 w-full">
         <div className="flex flex-col lg:flex-row text-center md:text-start items-center gap-5">
           <div className="aspect-square rounded-full h-20 bg-primary flex items-center justify-center">

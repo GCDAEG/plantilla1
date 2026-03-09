@@ -1,4 +1,3 @@
-import { base, title, titleH2 } from "@/app/page";
 import { Dumbbell } from "lucide-react";
 
 export function FooterSection() {
@@ -27,7 +26,7 @@ export function FooterSection() {
 
         {/* Columna 2: Useful links */}
         <div>
-          <h3 className={`${title} text-lg font-semibold text-white mb-4`}>
+          <h3 className={` text-lg font-semibold text-white mb-4`}>
             Useful links
           </h3>
           <ul className="space-y-3 text-sm">
@@ -56,9 +55,7 @@ export function FooterSection() {
 
         {/* Columna 3: Support */}
         <div>
-          <h3 className={`${title} text-lg font-semibold text-white mb-4`}>
-            Support
-          </h3>
+          <h3 className={` text-lg font-semibold text-white mb-4`}>Support</h3>
           <ul className="space-y-3 text-sm">
             <li>
               <a href="#" className="hover:text-primary transition-colors">
@@ -85,7 +82,7 @@ export function FooterSection() {
 
         {/* Columna 4: Tips & Guides */}
         <div>
-          <h3 className={`${titleH2} text-lg font-semibold text-white mb-4`}>
+          <h3 className={` text-lg font-semibold text-white mb-4`}>
             Tips & Guides
           </h3>
           <div className="space-y-6">
@@ -133,7 +130,7 @@ export function FooterSection() {
           </div>
 
           {/* Copyright centrado/derecha */}
-          <p className={`text-sm text-center md:text-right ${base}`}>
+          <p className={`text-sm text-center md:text-right `}>
             Copyright ©2026 All rights reserved | This template is made with ♥
             by Colorlib
           </p>

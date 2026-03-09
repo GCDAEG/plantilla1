@@ -1,4 +1,3 @@
-import { base, title, titleH2 } from "@/app/page";
 import { Section } from "@/components/layout/Section";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { StaggerContainer } from "@/components/motion/StraggerContainer";
@@ -42,7 +41,7 @@ const exercises = [
 
 const Exercises: React.FC<ExercisesProps> = ({}) => {
   return (
-    <Section id="features" size="content">
+    <Section id="exercices" height="content">
       <StaggerContainer
         className="
           mx-auto w-full max-w-7xl
@@ -54,8 +53,8 @@ const Exercises: React.FC<ExercisesProps> = ({}) => {
         "
       >
         <FadeIn className="w-full flex flex-col justify-center items-center">
-          <h3 className={`${titleH2} text-3xl text-primary`}>Ejercicios</h3>
-          <h2 className={`${titleH2} text-5xl`}>Adaptados a ti</h2>
+          <h3>Ejercicios</h3>
+          <h2 className={` text-5xl`}>Adaptados a ti</h2>
         </FadeIn>
 
         {/* Contenedor de las cards */}
@@ -87,15 +86,13 @@ const Exercises: React.FC<ExercisesProps> = ({}) => {
                   />
                 </div>
                 <div className="p-3 relative before:absolute before:border-t-4 before:border-primary before:top-0 before:left-0 before:h-96 before:w-[700] before:inset-0 before:bg-card before:rotate-2 before:origin-top-right">
-                  <div className="w-full h-full relative z-50 bg-card">
-                    <p
-                      className={`${title} uppercase text-lg font-bold text-primary`}
+                  <div className="w-full h-full relative z-40 bg-card">
+                    <h4
+                      className={` uppercase text-lg text-start tracking-wide text-primary`}
                     >
                       {exercise.title}
-                    </p>
-                    <h3 className={`${title} text-3xl font-bold`}>
-                      {exercise.description}
-                    </h3>
+                    </h4>
+                    <h3 className="text-foreground">{exercise.description}</h3>
                   </div>
                 </div>
               </div>

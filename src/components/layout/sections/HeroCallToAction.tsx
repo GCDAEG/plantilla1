@@ -1,4 +1,3 @@
-import { base, title, titleH2 } from "@/app/page";
 import { Section } from "@/components/layout/Section";
 import React from "react";
 // Si tenés tailwind variables para colores, ajustalas; acá uso clases estándar
@@ -6,7 +5,7 @@ import React from "react";
 
 const HeroCallToAction: React.FC = () => {
   return (
-    <Section id="join-now" size="content">
+    <Section id="join-now" height="content">
       {" "}
       {/* size="full" para que ocupe todo el ancho */}
       <div
@@ -30,18 +29,18 @@ const HeroCallToAction: React.FC = () => {
         {/* Contenido principal */}
         <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-10 lg:px-12 py-20 md:py-32">
           <h2
-            className={`text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-lg ${title}`}
+            className={`text-4xl md:text-5xl lg:text-6xl  tracking-normal mb-6 drop-shadow-lg `}
           >
             REGISTRATE AHORA
           </h2>
           <p
-            className={`text-xl md:text-2xl lg:text-3xl font-medium mb-10 drop-shadow-md max-w-3xl mx-auto ${titleH2}`}
+            className={`text-lg md:text-xl lg:text-2xl font-medium mb-10 drop-shadow-md max-w-3xl mx-auto `}
           >
-            PARA OBTENER MÁS OFERTAS Y BENEFICIOS
+            Para tener más ofertas y beneficios
           </p>
 
           <p
-            className={`text-lg md:text-xl lg:text-2xl mb-12 opacity-90 max-w-4xl mx-auto ${base}`}
+            className={`text-lg md:text-xl lg:text-2xl mb-12 opacity-90 max-w-4xl mx-auto `}
           >
             DONDE SALUD, BELLEZA Y FITNESS SE ENCUENTRAN.
           </p>
@@ -52,7 +51,7 @@ const HeroCallToAction: React.FC = () => {
               href="#registro" // o tu ruta real de registro / contacto
               className="
                 inline-flex items-center justify-center
-                px-5 py-2 text-xl md:text-xl font-bold
+                px-5 py-2 text-xl md:text-xl
                 rounded-lg bg-primary
                 text-white shadow-lg hover:shadow-xl
                 transition-all duration-300 transform hover:-translate-y-1
@@ -67,7 +66,7 @@ const HeroCallToAction: React.FC = () => {
               href="#mas-info"
               className="
                 inline-flex items-center justify-center
-                px-5 py-2 text-xl md:text-xl font-semibold
+                px-5 py-2 text-xl md:text-xl
                 rounded-lg border-2 border-white/70 text-white
                 hover:bg-white/10 transition-all duration-300
               "

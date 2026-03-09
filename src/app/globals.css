@@ -78,13 +78,29 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.396 0.141 25.723);
+   /* altura nav */
+  --navbar-height:96px;
+
+  /* font sources */
+  /* --font-sans: var(--font-roboto);
+  --font-title: var(--font-oswald);
+  --font-geist: var(--font-bebas_nue); */
 }
 
-
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
+@layer components {
+  h1,h2{
+    font-family:var(--font-bebas_nue);
+  }
+  h3{
+    font-family: var(--font-title-oswald);
+    @apply text-3xl text-primary
+  }
+  h4{
+    font-family: var(--font-bebas_nue);
+    @apply text-2xl text-balance text-center text-foreground tracking-wide
+  }
+  p,button,Button,li,Link,a{
+    font-family: var(--font-roboto)
   }
   body {
     @apply bg-background text-foreground;

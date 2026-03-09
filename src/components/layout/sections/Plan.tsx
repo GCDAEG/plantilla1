@@ -1,9 +1,5 @@
 import React from "react";
-import { StaggerContainer } from "../../../components/motion/StraggerContainer";
-import { FadeIn } from "../../../components/motion/FadeIn";
-import { StepCard } from "../../../components/ui/StepCard";
-import { SimpleCTAButton } from "../../../components/ui/CTAButton";
-import { title, titleH2 } from "@/app/page";
+import { StaggerContainer } from "../../motion/StraggerContainer";
 import { Section } from "@/components/layout/Section";
 import { formatPrice } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -79,7 +75,7 @@ const gymPlans: {
 
 const StepsSection = ({}) => {
   return (
-    <Section id="steps" size="screen">
+    <Section id="steps" height="screen">
       <StaggerContainer
         className="
       mx-auto w-full max-w-7xl
@@ -117,15 +113,17 @@ const StepsSection = ({}) => {
               >
                 {plan.popular && (
                   <div
-                    className={`absolute w-full left-0 flex justify-center bg-yellow-400 text-gray-900 font-bold rounded-bl-lg text-2xl h-8 overflow-hidden ${title}`}
+                    className={`absolute w-full left-0 flex justify-center bg-yellow-400 text-gray-900 font-bold rounded-bl-lg text-2xl h-8 overflow-hidden `}
                   >
-                    MÁS POPULAR
+                    <p>MÁS POPULAR</p>
                   </div>
                 )}
               </div>
 
               <div className="flex  flex-col gap-5 text-center relative z-10">
-                <h3 className={`text-4xl md:text-5xl font-bold mb-2 ${title}`}>
+                <h3
+                  className={`text-4xl md:text-5xl font-bold mb-2 ${plan.popular ? "text-primary-foreground" : "text-primary"}`}
+                >
                   {plan.name}
                 </h3>
                 <div className="flex justify-center items-end">

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import { FooterSection } from "@/components/layout/Footer";
-import { SectionNavbar } from "@/components/layout/Nav";
-import { ThemeProvider } from "@/components/theme-provider";
-import Banner from "@/components/ui/banner";
+import { NavBar } from "@/components/layout/Nav";
+import ReactLenis from "lenis/react";
+import { bebasNue, oswald, roboto } from "@/lib/fonts";
 
 const metadata: Metadata = {
   title: {
@@ -35,25 +35,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={``} suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body
-        className="
+        className={`
           min-h-screen antialiased text-foreground bg-fixed
           overflow-x-hidden bg-gradient-main
           min-w-screen
-        "
+          ${bebasNue.variable}
+          ${roboto.variable}
+          ${oswald.variable}
+        `}
       >
         {/* Opcional: capa extra para overlay si quieres más control */}
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <SectionNavbar />
+        <ReactLenis root>
+          <NavBar />
           {children}
           <FooterSection />
-        </ThemeProvider>
+        </ReactLenis>
       </body>
     </html>
   );
